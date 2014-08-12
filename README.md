@@ -1,6 +1,6 @@
 ## React Component Boilerplate
 
-Develop react components quickly with Mocha & Chai. Jest is awesome, but the tests are far too slow. Based on the following [Gulp file](http://blog.avisi.nl/2014/04/25/how-to-keep-a-fast-build-with-browserify-and-reactjs/) we can achieve continous tests using Livereload that are incredibly fast as well.  Running your tests in the browser eliminates quite a few headaches and you get the benefit of dev tools as well.
+Develop react components quickly with Mocha & Chai. Jest is awesome, but the tests are far too slow for react components. Based on the following [Gulp file](http://blog.avisi.nl/2014/04/25/how-to-keep-a-fast-build-with-browserify-and-reactjs/) we can achieve continous tests using Livereload that are incredibly fast as well.  Running your tests in the browser eliminates quite a few headaches and you get the benefit of dev tools as well.
 
 ### Install
 
