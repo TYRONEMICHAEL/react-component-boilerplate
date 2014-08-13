@@ -6,49 +6,37 @@ var watchify = require('watchify');
 var reactify = require('reactify');
 var livereload = require('gulp-livereload');
 var gutil = require('gulp-util');
+var gulpif = require('gulp-if');
 
-// Our React component that we will be testing
-var componentToTestPath = './tests/checkboxWithLabel-test.js';
-
-// Handle errors elegantly
-function handleError(task) {
-  return function(err) {
-    gutil.log(gutil.colors.red(err));
-    notify.onError(task + ' failed, check the logs..')(err);
-  };
-}
+var handleError = require('./gulp/handleError');
 
 /** 
-  Use Browserify to bundle up our tests
-  We pass in `true` to start a Livereload server 
+  Use Browserify to bundle up our tests.
+
+  gulp test --watch --tests './tests/checkboxWithLabel-test.js'
+
   Thanks to - http://blog.avisi.nl/2014/04/25/how-to-keep-a-fast-build-with-browserify-and-reactjs/ 
 */
-function scripts(watch) {
-  var bundler = browserify(componentToTestPath, watchify.args);
-  var rebundle;
-  var stream;
+gulp.task('test', function () {
+    var componentToTestPath = gutil.env.tests;
+    var bundler = browserify(componentToTestPath, watchify.args);
 
-  if(watch) bundler = watchify(bundler);
+    if(gutil.env.watch) {
+        livereload.listen();
+        bundler = watchify(bundler);
+    }
 
-  bundler.transform(reactify);
+    bundler.transform(reactify);
 
-  rebundle = function() {
-    stream = bundler.bundle()
-      .on('error', handleError('Browserify'))
-      .pipe(source(componentToTestPath))
-      .pipe(gulp.dest('./.tmp/'));
-    
-    if(watch) stream.pipe(livereload());
-  };
+    var rebundle = function() {
+        bundler.bundle()
+            .on('error', handleError('Browserify'))
+            .pipe(source(componentToTestPath))
+            .pipe(gulp.dest('./.tmp/'))
+            .pipe(gulpif(gutil.env.watch, livereload()));
+    };
 
-  bundler.on('update', rebundle);
+    bundler.on('update', rebundle);
 
-  return rebundle();
-}
-
-// Our default Gulp tasks
-gulp.task('default', function() { scripts(false); });
-gulp.task('watch', function() {
-  livereload.listen();
-  scripts(true);
+    return rebundle();
 });
