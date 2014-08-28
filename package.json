@@ -1,7 +1,7 @@
 {
   "name": "react-component-boilerplate",
   "version": "0.2.0",
-  "description": "A React component boilerplate. Test your components quickly and continuously with Karma.",
+  "description": "A React component boilerplate. Test your component quickly and continuously with Karma.",
   "scripts": {
      "start": "./node_modules/react-tools/bin/jsx  src/ build/",
      "test": "./node_modules/karma/bin/karma start karma.conf.js"

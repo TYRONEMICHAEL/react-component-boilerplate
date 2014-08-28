@@ -12,7 +12,7 @@ Jest is an awesome framework, but I found running tests using JSX to be extremel
 * Run `npm start`
 * Open `index.html` and view your awesome creation
 
-### Testing Your Components
+### Testing Your Component
 
 * Run `npm test`
 * To have your  tests run continuously, just run `./node_modules/karma/bin/karma start karma.conf.js --no-single-run` or you can always change the Karma configuration file
