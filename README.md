@@ -1,28 +1,22 @@
 ## React Component Boilerplate
 
-Develop react components quickly with Mocha & Chai. Jest is awesome, but the tests are far too slow for react components. Based on the following [Gulp file](http://blog.avisi.nl/2014/04/25/how-to-keep-a-fast-build-with-browserify-and-reactjs/) we can achieve continous tests using Livereload that are incredibly fast as well.  Running your tests in the browser eliminates quite a few headaches and you get the benefit of dev tools as well.
+Jest is an awesome framework, but I found running tests using JSX to be extremely slow. So that is how react-component-boilerplate was born. You can view the conversation [here](https://github.com/facebook/jest/issues/116) if you are interested. So this repo lets you test and create React components quickly with Karma. Have your tests run continuously with the added benefit of testing in your favorite and least favorite browsers while also having access to developer tools. Win Win.
 
-### Install
+
+### Building Your Component
 
 * Clone the repo
 * Run `npm install`
-* run `gulp test --tests './tests/checkboxWithLabel-test.js'`
-* Open `index.html`
+* Run `npm start`
+* Open `index.html` and view your awesome creation
 
-### Livereload
+### Testing Your Components
 
-* No plugin required, reload script is provided in the index.html
-* Run `gulp test --watch --tests './tests/checkboxWithLabel-test.js'`
-* Edit your component under the tests directory and your tests will automatically be run
-
-
-### Run all tests with Karma
+* If you have not already done so
 * Clone the repo
-* Run `npm install`
-* Run `npm test`
+* Run `npm test`. Voila!
+* To have your  tests run continuously, just run `./node_modules/karma/bin/karma start karma.conf.js --no-single-run` or you can always change the Karma configuration file
 
-Karma will launch Chrome and Firefox and will run the tests. Karma will continue to look for changes and rerun tests as needed.
+### Contribution
 
-If you need to run your tests in a CI environment run:
-
-`./node_modules/.bin/karma start --single-run --browsers PhantomJS`
+* Special thanks to [iamrandys](https://github.com/iamrandys)
