@@ -4,8 +4,7 @@
   "description": "A React component boilerplate. Test your components quickly and continuously with Karma.",
   "scripts": {
      "start": "./node_modules/react-tools/bin/jsx  src/ build/",
-     "tests": "./node_modules/karma/bin/karma start karma.conf.js",
-     "continuous": "./node_modules/karma/bin/karma start karma.conf.js --no-single-run"
+     "tests": "./node_modules/karma/bin/karma start karma.conf.js"
   },
   "author": "Tyrone Michael Avnit",
   "license": "ISC",
