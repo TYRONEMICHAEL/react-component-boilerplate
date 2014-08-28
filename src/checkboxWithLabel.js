@@ -8,7 +8,7 @@
   } else if (typeof exports !== 'undefined') {
     module.exports = factory(root, exports, require('react'));
   } else {
-    root.CheckboxWithLabel = factory(root, {}, root.React, roo);
+    root.CheckboxWithLabel = factory(root, {}, root.React);
   }
 
 }(this, function(root, CheckboxWithLabel, React) {
