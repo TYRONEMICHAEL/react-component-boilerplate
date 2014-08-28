@@ -1,6 +1,6 @@
 ## React Component Boilerplate
 
-Jest is an awesome framework, but I found running tests using JSX to be extremely slow. So that is how react-component-boilerplate was born. You can view the conversation [here](https://github.com/facebook/jest/issues/116) if you are interested. So this repo lets you test and create React components quickly with Karma. Have your tests run continuously with the added benefit of testing in your favorite and least favorite browsers while also having access to developer tools. Win Win.
+React-Component-Boilerplate lets you test and create React components quickly with Karma. Have your tests run continuously with the added benefit of testing in your favorite and least favorite browsers while also having access to developer tools. Win Win. This was born out of the following [thread](https://github.com/facebook/jest/issues/116). 
 
 ### Setup
 
