@@ -1,11 +1,19 @@
 {
   "name": "react-component-boilerplate",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A React component boilerplate. Test your component quickly and continuously with Karma.",
   "scripts": {
     "start": "./node_modules/react-tools/bin/jsx  src/ build/",
     "test": "./node_modules/karma/bin/karma start karma.conf.js"
   },
+  "keywords": [
+    "facebook",
+    "react",
+    "react-component",
+    "boilerplate",
+    "karma",
+    "mocha",
+  ],
   "author": "Tyrone Michael Avnit",
   "license": "ISC",
   "devDependencies": {
