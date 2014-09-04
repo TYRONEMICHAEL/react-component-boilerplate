@@ -14,8 +14,16 @@
     "karma",
     "mocha"
   ],
-  "author": "Tyrone Michael Avnit",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TYRONEMICHAEL/react-component-boilerplate.git"
+  },
+  "author": "Tyrone Michael Avnit <tyronemichael@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TYRONEMICHAEL/react-component-boilerplate/issues"
+  },
+  "homepage": "https://github.com/TYRONEMICHAEL/react-component-boilerplate"
   "devDependencies": {
     "browserify": "^5.9.3",
     "chai": "^1.9.1",
