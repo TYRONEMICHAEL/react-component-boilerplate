@@ -1,6 +1,6 @@
 {
   "name": "react-component-boilerplate",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A React component boilerplate. Test your component quickly and continuously with Karma.",
   "scripts": {
     "start": "./node_modules/react-tools/bin/jsx  src/ build/",
@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/TYRONEMICHAEL/react-component-boilerplate/issues"
   },
-  "homepage": "https://github.com/TYRONEMICHAEL/react-component-boilerplate"
+  "homepage": "https://github.com/TYRONEMICHAEL/react-component-boilerplate",
   "devDependencies": {
     "browserify": "^5.9.3",
     "chai": "^1.9.1",
